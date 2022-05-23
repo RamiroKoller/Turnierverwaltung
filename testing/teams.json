@@ -1,0 +1,50 @@
+[
+  {
+    "teamNr": "00001",
+    "teamName": "Tottenham Fc",
+    "anzahlTrophaeen": "15",
+    "gruendungsdatum": "1882-12-01"
+  },
+  {
+    "teamNr": "00002",
+    "teamName": "Arsenal Fc",
+    "anzahlTrophaeen": "85",
+    "gruendungsdatum": "1886-01-18"
+  },
+  {
+    "teamNr": "00003",
+    "teamName": "Chelsea Fc",
+    "anzahlTrophaeen": "89",
+    "gruendungsdatum": "1905-02-05"
+  },
+  {
+    "teamNr": "00004",
+    "teamName": "Liverpool Fc",
+    "anzahlTrophaeen": "85",
+    "gruendungsdatum": "1892-07-12"
+  },
+  {
+    "teamNr": "00005",
+    "teamName": "Leicester City Fc",
+    "anzahlTrophaeen": "5",
+    "gruendungsdatum": "1884-11-14"
+  },
+  {
+    "teamNr": "00006",
+    "teamName": "Manchester City",
+    "anzahlTrophaeen": "45",
+    "gruendungsdatum": "1880-05-07"
+  },
+  {
+    "teamNr": "00007",
+    "teamName": "Manchester United",
+    "anzahlTrophaeen": "78",
+    "gruendungsdatum": "1878-03.28"
+  },
+  {
+    "teamNr": "00008",
+    "teamName": "Newcastle United",
+    "anzahlTrophaeen": "2",
+    "gruendungsdatum": "1881-08-11"
+  }
+]
