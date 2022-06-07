@@ -1,0 +1,172 @@
+{
+	"id": "d92ae80b-4a0a-4d2c-91e2-e6c4317e94f6",
+	"name": "Turnierverwaltung",
+	"timestamp": "2022-05-23T20:35:10.771Z",
+	"collection_id": "d7c0c0c0-fb67-4a40-a20d-8903849f65f3",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 0,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "e0709ede-8b74-4dd6-a5d4-5e2b7c77af33",
+			"name": "0.1 Testservice",
+			"url": "http://localhost:8080/Turnierverwaltung-1.0/resource/test/test",
+			"time": 31,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				31
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "75c83305-b743-4788-99b6-f56c04e8f3cf",
+			"name": "1.0listallBooks",
+			"url": "http://localhost:8080/Turnierverwaltung-1.0/resource/team/list",
+			"time": 13,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				13
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "5e0f6ca9-f96a-4ef0-bc0f-e91c674aae63",
+			"name": "1.0 read 1 book",
+			"url": "http://localhost:8080/Turnierverwaltung-1.0/resource/team/read?nr=1",
+			"time": 6,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				6
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "fae86b0a-6cab-4655-93d3-70ae9bbba531",
+			"name": "1.1 read 1 book not found",
+			"url": "http://localhost:8080/Turnierverwaltung-1.0/resource/team/read?nr=11213123",
+			"time": 6,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				6
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "fefe9be4-292c-4d02-8d84-89a00dc80a4e",
+			"name": "1.0 read 1 tournament",
+			"url": "http://localhost:8080/Turnierverwaltung-1.0/resource/turnier/read?nr=1",
+			"time": 14,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				14
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "4d03add6-7404-4b78-a4e6-e06630e23665",
+			"name": "1.1 read 1 tournament not found",
+			"url": "http://localhost:8080/Turnierverwaltung-1.0/resource/turnier/read?nr=12344343",
+			"time": 5,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				5
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "938473af-762a-4d98-b2cd-aec7000dfc2a",
+			"name": "1.0 list all tournaments",
+			"url": "http://localhost:8080/Turnierverwaltung-1.0/resource/turnier/list",
+			"time": 44,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				44
+			],
+			"allTests": [
+				{}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 119,
+	"collection": {
+		"requests": [
+			{
+				"id": "e0709ede-8b74-4dd6-a5d4-5e2b7c77af33",
+				"method": "GET"
+			},
+			{
+				"id": "75c83305-b743-4788-99b6-f56c04e8f3cf",
+				"method": "GET"
+			},
+			{
+				"id": "5e0f6ca9-f96a-4ef0-bc0f-e91c674aae63",
+				"method": "GET"
+			},
+			{
+				"id": "fae86b0a-6cab-4655-93d3-70ae9bbba531",
+				"method": "GET"
+			},
+			{
+				"id": "fefe9be4-292c-4d02-8d84-89a00dc80a4e",
+				"method": "GET"
+			},
+			{
+				"id": "4d03add6-7404-4b78-a4e6-e06630e23665",
+				"method": "GET"
+			},
+			{
+				"id": "938473af-762a-4d98-b2cd-aec7000dfc2a",
+				"method": "GET"
+			}
+		]
+	}
+}
