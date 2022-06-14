@@ -43,7 +43,9 @@ public class TeamService {
     @Produces(MediaType.TEXT_PLAIN)
     public Response insertBook(
             @Valid @BeanParam Team team,
-            @NotEmpty)
+            @NotEmpty
+            @FormParam()
+            )
 
      {
 
@@ -65,17 +67,17 @@ public class TeamService {
     @Produces(MediaType.TEXT_PLAIN)
     public Response updateBook(
             @Valid @BeanParam Team team,
-            @NotEmpty)
+            @NotEmpty
+            @FormParam("teamNr") Integer teamNr
+            )
     {
         int httpStatus = 200;
         Team oldTeam = DataHandler.getInstance().readTeamByNr(team.getTeamNr());
         if (oldTeam != null) {
-            oldTeam.setTitle(book.getTitle());
-            oldTeam.setAuthor(book.getAuthor());
-            oldTeam.setPublisherUUID(publisherUUID);
-            oldTeam.setPrice(book.getPrice());
-            oldTeam.setIsbn(book.getIsbn());
-            oldTeam.setRelease(book.getRelease());
+            oldTeam.setTeamNr(teamNr);
+            oldTeam.setTeamName(team.getTeamName());
+            oldTeam.setAnzahlTrophaeen(team.getAnzahlTrophaeen());
+            oldTeam.setGruendungsdatum(team.getGruendungsdatum());
 
             DataHandler.updateTeam();
         } else {
