@@ -28,7 +28,7 @@ public class Config extends Application {
         HashSet providers = new HashSet<Class<?>>();
         providers.add(TeamService.class);
         providers.add(TestService.class);
-        providers.add(TurnierService.class);
+        providers.add(TournamentService.class);
         return providers;
     }
 

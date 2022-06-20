@@ -8,8 +8,8 @@ import javax.validation.Valid;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
-import java.awt.*;
 import java.util.List;
+import java.util.Random;
 
 @Path("team")
 public class TeamService {
@@ -24,7 +24,7 @@ public class TeamService {
     @GET
     @Path("read")
     @Produces(MediaType.APPLICATION_JSON)
-    public Response listTeams(
+    public Response readTeam(
             @QueryParam("nr") Integer teamNr
     ){
         Team team = DataHandler.getInstance().readTeamByNr(teamNr);
@@ -38,19 +38,28 @@ public class TeamService {
      * inserts a new book
      * @return Response
      */
-    @POST
+   @POST
     @Path("create")
     @Produces(MediaType.TEXT_PLAIN)
-    public Response insertBook(
-            @Valid @BeanParam Team team,
-            @NotEmpty
-            @FormParam()
+    public Response insertTeam(
+            @FormParam("teamName") String teamName,
+            @FormParam("amountOfTrophies") Integer amountOfTrophies,
+            @FormParam("foundingDate") String foundingDate
             )
 
-     {
+            {
+                Random rn = new Random();
+                int maximum = 99999;
+                int minimum= 1;
+                int n = maximum - minimum + 1;
+                int i = rn.nextInt() % n;
 
-         team.setTeamNr(team.getTeamNr());
-         
+                Team team = new Team();
+                team.setTeamNr(minimum + i);
+                team.setTeamName(teamName);
+                team.setAmountOfTrophies(amountOfTrophies);
+                team.setFoundingDate(foundingDate);
+
         DataHandler.insertTeam(team);
         return Response
                 .status(200)
@@ -62,22 +71,23 @@ public class TeamService {
      * updates a new book
      * @return Response
      */
-    @PUT
+    @POST
     @Path("update")
     @Produces(MediaType.TEXT_PLAIN)
     public Response updateBook(
-            @Valid @BeanParam Team team,
-            @NotEmpty
-            @FormParam("teamNr") Integer teamNr
+            @FormParam("teamNr") Integer teamNr,
+            @FormParam("teamName") String teamName,
+            @FormParam("anzahlTrophaeen") Integer anzahlTrophaeen,
+            @FormParam("gruendungsdatum") String gruendungsDatum
             )
     {
         int httpStatus = 200;
-        Team oldTeam = DataHandler.getInstance().readTeamByNr(team.getTeamNr());
+        Team oldTeam = DataHandler.getInstance().readTeamByNr(teamNr);
         if (oldTeam != null) {
             oldTeam.setTeamNr(teamNr);
-            oldTeam.setTeamName(team.getTeamName());
-            oldTeam.setAnzahlTrophaeen(team.getAnzahlTrophaeen());
-            oldTeam.setGruendungsdatum(team.getGruendungsdatum());
+            oldTeam.setTeamName(teamName);
+            oldTeam.setAmountOfTrophies(anzahlTrophaeen);
+            oldTeam.setFoundingDate(gruendungsDatum);
 
             DataHandler.updateTeam();
         } else {
@@ -105,4 +115,5 @@ public class TeamService {
                 .entity("")
                 .build();
     }
+
 }

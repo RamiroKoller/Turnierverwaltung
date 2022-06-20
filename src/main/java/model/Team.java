@@ -1,20 +1,34 @@
 package model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import data.DataHandler;
+import org.hibernate.validator.constraints.NotEmpty;
 
-import java.time.LocalDate;
+import javax.validation.constraints.Size;
+import javax.ws.rs.FormParam;
 
 /**
  *
  */
 public class Team {
+
+    @FormParam("teamNr")
     private Integer teamNr;
+
+    @FormParam("teamName")
+    @NotEmpty
+    @Size(min = 3, max = 50)
     private String teamName;
-    private Integer anzahlTrophaeen;
-    private LocalDate gruendungsdatum;
+
+    @FormParam("anzahlTrophaeen")
+    @NotEmpty
+    private Integer amountOfTrophies;
+
+    @FormParam("gruendungsdatum")
+
+    private String foundingDate;
+
     @JsonIgnore
-    private Turnier turnier;
+    private Tournament tournament;
 
 
 
@@ -34,27 +48,27 @@ public class Team {
         this.teamName = teamName;
     }
 
-    public Integer getAnzahlTrophaeen() {
-        return anzahlTrophaeen;
+    public Integer getAmountOfTrophies() {
+        return amountOfTrophies;
     }
 
-    public void setAnzahlTrophaeen(Integer anzahlTrophaeen) {
-        this.anzahlTrophaeen = anzahlTrophaeen;
+    public void setAmountOfTrophies(Integer amountOfTrophies) {
+        this.amountOfTrophies = amountOfTrophies;
     }
 
-    public LocalDate getGruendungsdatum() {
-        return gruendungsdatum;
+    public String getFoundingDate() {
+        return foundingDate;
     }
 
-    public void setGruendungsdatum(LocalDate gruendungsdatum) {
-        this.gruendungsdatum = gruendungsdatum;
+    public void setFoundingDate(String foundingDate) {
+        this.foundingDate = foundingDate;
     }
 
-    public Turnier getTurnier() {
-        return turnier;
+    public Tournament getTurnier() {
+        return tournament;
     }
 
-    public void setTurnier(Turnier turnier) {
-        this.turnier = turnier;
+    public void setTurnier(Tournament tournament) {
+        this.tournament = tournament;
     }
 }

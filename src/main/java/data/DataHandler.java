@@ -5,7 +5,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import model.Team;
-import model.Turnier;
+import model.Tournament;
 import service.Config;
 
 import java.io.*;
@@ -18,7 +18,7 @@ import java.util.List;
 public class DataHandler {
     private static DataHandler instance = null;
     private List<Team> teamList;
-    private List<Turnier> turnierList;
+    private List<Tournament> tournamentList;
 
 
     private DataHandler(){
@@ -43,12 +43,12 @@ public class DataHandler {
         return teamList;
     }
 
-    public List<Turnier> getTurnierList() {
-        return turnierList;
+    public List<Tournament> getTurnierList() {
+        return tournamentList;
     }
 
-    public void setTurnierList(List<Turnier> turnierList) {
-        this.turnierList = turnierList;
+    public void setTurnierList(List<Tournament> tournamentList) {
+        this.tournamentList = tournamentList;
     }
 
     public void setTeamList(List<Team> teamList) {
@@ -79,9 +79,9 @@ public class DataHandler {
             );
             ObjectMapper objectMapper = new ObjectMapper();
             objectMapper.registerModule(new JavaTimeModule());
-            Turnier[] turniere = objectMapper.readValue(jsonData,Turnier[].class);
-            for (Turnier turnier : turniere){
-                getTurnierList().add(turnier);
+            Tournament[] turniere = objectMapper.readValue(jsonData, Tournament[].class);
+            for (Tournament tournament : turniere){
+                getTurnierList().add(tournament);
             }
         } catch (IOException ex) {
             ex.printStackTrace();
@@ -114,7 +114,7 @@ public class DataHandler {
         try {
             fileOutputStream = new FileOutputStream(bookPath);
             fileWriter = new BufferedWriter(new OutputStreamWriter(fileOutputStream, StandardCharsets.UTF_8));
-            objectWriter.writeValue(fileWriter, getInstance().turnierList);
+            objectWriter.writeValue(fileWriter, getInstance().tournamentList);
         } catch (IOException ex) {
             ex.printStackTrace();
         }
@@ -155,29 +155,29 @@ public class DataHandler {
         return false;
     }
 
-    public List<Turnier> readAllTournaments(){
+    public List<Tournament> readAllTournaments(){
         return getTurnierList();
     }
 
-    public Turnier readTournamentByNumber(Integer turnierNr) {
-        Turnier turnier = null;
-        for (Turnier entry : getTurnierList()){
+    public Tournament readTournamentByNumber(Integer turnierNr) {
+        Tournament tournament = null;
+        for (Tournament entry : getTurnierList()){
             if (entry.getTurnierNr().equals(turnierNr)) {
-                turnier = entry;
+                tournament = entry;
             }
         }
-        return turnier;
+        return tournament;
     }
 
-    public static void insertTournament(Turnier turnier) {
-        getInstance().getTurnierList().add(turnier);
+    public void insertTournament(Tournament tournament) {
+        getInstance().getTurnierList().add(tournament);
         writeTournamentJSON();
     }
 
     /**
      * updates the tournamentList
      */
-    public static void updateTournament() {
+    public void updateTournament() {
         writeTournamentJSON();
     }
 
@@ -185,10 +185,10 @@ public class DataHandler {
      * deletes a Tournament identified by the turnierNr
      * @return  success=true/false
      */
-    public static boolean deleteTournament(Integer turnierNr) {
-        Turnier turnier = getInstance().readTournamentByNumber(turnierNr);
-        if (turnier != null){
-            getInstance().getTurnierList().remove(turnier);
+    public boolean deleteTournament(Integer turnierNr) {
+        Tournament tournament = getInstance().readTournamentByNumber(turnierNr);
+        if (tournament != null){
+            getInstance().getTurnierList().remove(tournament);
             writeTournamentJSON();
             return true;
         }else {

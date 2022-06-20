@@ -11,7 +11,18 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": ""
+					"raw": "http://localhost:8080/Turnierverwaltung-1.0/resource/test/test",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Turnierverwaltung-1.0",
+						"resource",
+						"test",
+						"test"
+					]
 				}
 			},
 			"response": []
@@ -22,7 +33,18 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": ""
+					"raw": "http://localhost:8080/Turnierverwaltung-1.0/resource/team/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Turnierverwaltung-1.0",
+						"resource",
+						"team",
+						"list"
+					]
 				}
 			},
 			"response": []
@@ -33,7 +55,46 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": ""
+					"raw": "http://localhost:8080/Turnierverwaltung-1.0/resource/team/read?nr=3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Turnierverwaltung-1.0",
+						"resource",
+						"team",
+						"read"
+					],
+					"query": [
+						{
+							"key": "nr",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1.0 read 1 book empty",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/Turnierverwaltung-1.0/resource/team/read",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Turnierverwaltung-1.0",
+						"resource",
+						"team",
+						"read"
+					]
 				}
 			},
 			"response": []
@@ -44,7 +105,24 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": ""
+					"raw": "http://localhost:8080/Turnierverwaltung-1.0/resource/team/read?nr=11213123",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Turnierverwaltung-1.0",
+						"resource",
+						"team",
+						"read"
+					],
+					"query": [
+						{
+							"key": "nr",
+							"value": "11213123"
+						}
+					]
 				}
 			},
 			"response": []
@@ -55,7 +133,24 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": ""
+					"raw": "http://localhost:8080/Turnierverwaltung-1.0/resource/turnier/read?nr=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Turnierverwaltung-1.0",
+						"resource",
+						"turnier",
+						"read"
+					],
+					"query": [
+						{
+							"key": "nr",
+							"value": "1"
+						}
+					]
 				}
 			},
 			"response": []
@@ -66,7 +161,24 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": ""
+					"raw": "http://localhost:8080/Turnierverwaltung-1.0/resource/turnier/read?nr=12344343",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Turnierverwaltung-1.0",
+						"resource",
+						"turnier",
+						"read"
+					],
+					"query": [
+						{
+							"key": "nr",
+							"value": "12344343"
+						}
+					]
 				}
 			},
 			"response": []
@@ -77,7 +189,490 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": ""
+					"raw": "http://localhost:8080/Turnierverwaltung-1.0/resource/turnier/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Turnierverwaltung-1.0",
+						"resource",
+						"turnier",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2.1 delete team",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/Turnierverwaltung-1.0/resource/team/delete?nr=57396",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Turnierverwaltung-1.0",
+						"resource",
+						"team",
+						"delete"
+					],
+					"query": [
+						{
+							"key": "nr",
+							"value": "57396"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2.2 delete tournament",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/Turnierverwaltung-1.0/resource/tournament/delete?nr=62206",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Turnierverwaltung-1.0",
+						"resource",
+						"tournament",
+						"delete"
+					],
+					"query": [
+						{
+							"key": "nr",
+							"value": "62206"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2.2 delete tournament empty nr",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/Turnierverwaltung-1.0/resource/tournament/delete",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Turnierverwaltung-1.0",
+						"resource",
+						"tournament",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2.2 delete tournament non existent nr",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/Turnierverwaltung-1.0/resource/tournament/delete?=46545",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Turnierverwaltung-1.0",
+						"resource",
+						"tournament",
+						"delete"
+					],
+					"query": [
+						{
+							"key": null,
+							"value": "46545"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2.1 delete team empty nr",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/Turnierverwaltung-1.0/resource/team/delete",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Turnierverwaltung-1.0",
+						"resource",
+						"team",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2.1 delete team non existent nr",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/Turnierverwaltung-1.0/resource/team/delete?=99999",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Turnierverwaltung-1.0",
+						"resource",
+						"team",
+						"delete"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "99999"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2.5 insert Team",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "teamName",
+							"value": "Fc Basel",
+							"type": "text"
+						},
+						{
+							"key": "amountOfTrophies",
+							"value": "54",
+							"type": "text"
+						},
+						{
+							"key": "foundingDate",
+							"value": "12.03.1893",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/Turnierverwaltung-1.0/resource/team/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Turnierverwaltung-1.0",
+						"resource",
+						"team",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2.5 insert Team wrong datatype",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "teamName",
+							"value": "Fc Basel",
+							"type": "text"
+						},
+						{
+							"key": "amountOfTrophies",
+							"value": "dd",
+							"type": "text"
+						},
+						{
+							"key": "foundingDate",
+							"value": "12.03.1893",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/Turnierverwaltung-1.0/resource/team/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Turnierverwaltung-1.0",
+						"resource",
+						"team",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2.6 insert Tournament correct",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "tournamentDescription",
+							"value": "Fc Basel",
+							"type": "text"
+						},
+						{
+							"key": "startDate",
+							"value": "12.03.1893",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/Turnierverwaltung-1.0/resource/tournament/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Turnierverwaltung-1.0",
+						"resource",
+						"tournament",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2.6 insert Tournament description missing",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "tournamentDescription",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "startDate",
+							"value": "12.03.1893",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/Turnierverwaltung-1.0/resource/tournament/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Turnierverwaltung-1.0",
+						"resource",
+						"tournament",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2.6 insert Tournament description incorrect",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "tournamentDescription",
+							"value": "jdhfjdhjfhdjkhfjkdhfjhdjfhdsjhjdgjdhfjdhfjkdhjkfhdsjkfhjkdhfjkdhfjhdjfhjdkhfjdhfjkdhfjkhdjkfhdjhfjkdshfjhdjfhdsjkfhjhfjkdshfjkd",
+							"type": "text"
+						},
+						{
+							"key": "startDate",
+							"value": "12.03.1893",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/Turnierverwaltung-1.0/resource/tournament/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Turnierverwaltung-1.0",
+						"resource",
+						"tournament",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2.6 insert Tournament startDate missing Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "tournamentDescription",
+							"value": "Premier Leauge",
+							"type": "text"
+						},
+						{
+							"key": "startDate",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/Turnierverwaltung-1.0/resource/tournament/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Turnierverwaltung-1.0",
+						"resource",
+						"tournament",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2.6 insert Tournament startDate incorrect",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "tournamentDescription",
+							"value": "Premier Leauge",
+							"type": "text"
+						},
+						{
+							"key": "startDate",
+							"value": "8783.3434.34.34343",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/Turnierverwaltung-1.0/resource/tournament/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Turnierverwaltung-1.0",
+						"resource",
+						"tournament",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2.7 update Team",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "teamNr",
+							"value": "6",
+							"type": "text"
+						},
+						{
+							"key": "teamName",
+							"value": "Fc Basel",
+							"type": "text"
+						},
+						{
+							"key": "anzahlTrophaeen",
+							"value": "45",
+							"type": "text"
+						},
+						{
+							"key": "gruendungsdatum",
+							"value": "12.03.1893",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/Turnierverwaltung-1.0/resource/team/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Turnierverwaltung-1.0",
+						"resource",
+						"team",
+						"update"
+					]
 				}
 			},
 			"response": []
