@@ -42,9 +42,7 @@ public class TeamService {
     @Path("create")
     @Produces(MediaType.TEXT_PLAIN)
     public Response insertTeam(
-            @FormParam("teamName") String teamName,
-            @FormParam("amountOfTrophies") Integer amountOfTrophies,
-            @FormParam("foundingDate") String foundingDate
+            @Valid @BeanParam Team team
             )
 
             {
@@ -54,11 +52,7 @@ public class TeamService {
                 int n = maximum - minimum + 1;
                 int i = rn.nextInt() % n;
 
-                Team team = new Team();
                 team.setTeamNr(minimum + i);
-                team.setTeamName(teamName);
-                team.setAmountOfTrophies(amountOfTrophies);
-                team.setFoundingDate(foundingDate);
 
         DataHandler.insertTeam(team);
         return Response

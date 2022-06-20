@@ -10,6 +10,7 @@ import java.util.List;
  *
  */
 public class Tournament {
+    @FormParam("turnierNr")
     private Integer turnierNr;
     @FormParam("tournamentDescription")
     @NotEmpty

@@ -1,7 +1,7 @@
 {
-	"id": "3b79b8b5-7bba-4793-9b99-f6e1775dee69",
+	"id": "ecd6cf77-051f-49b3-9f7a-8a1c5d8e2814",
 	"name": "Turnierverwaltung",
-	"timestamp": "2022-06-20T20:34:42.684Z",
+	"timestamp": "2022-06-20T21:34:43.707Z",
 	"collection_id": "d7c0c0c0-fb67-4a40-a20d-8903849f65f3",
 	"folder_id": 0,
 	"environment_id": "0",
@@ -12,42 +12,6 @@
 			"id": "e0709ede-8b74-4dd6-a5d4-5e2b7c77af33",
 			"name": "0.1 Testservice",
 			"url": "http://localhost:8080/Turnierverwaltung-1.0/resource/test/test",
-			"time": 47,
-			"responseCode": {
-				"code": 200,
-				"name": "OK"
-			},
-			"tests": {},
-			"testPassFailCounts": {},
-			"times": [
-				47
-			],
-			"allTests": [
-				{}
-			]
-		},
-		{
-			"id": "75c83305-b743-4788-99b6-f56c04e8f3cf",
-			"name": "1.0listallBooks",
-			"url": "http://localhost:8080/Turnierverwaltung-1.0/resource/team/list",
-			"time": 684,
-			"responseCode": {
-				"code": 200,
-				"name": "OK"
-			},
-			"tests": {},
-			"testPassFailCounts": {},
-			"times": [
-				684
-			],
-			"allTests": [
-				{}
-			]
-		},
-		{
-			"id": "5e0f6ca9-f96a-4ef0-bc0f-e91c674aae63",
-			"name": "1.0 read 1 book",
-			"url": "http://localhost:8080/Turnierverwaltung-1.0/resource/team/read?nr=3",
 			"time": 11,
 			"responseCode": {
 				"code": 200,
@@ -63,13 +27,211 @@
 			]
 		},
 		{
-			"id": "29af0069-2e3c-474d-bebc-c8c5a0d27201",
-			"name": "1.0 read 1 book empty",
-			"url": "http://localhost:8080/Turnierverwaltung-1.0/resource/team/read",
-			"time": 17,
+			"id": "75c83305-b743-4788-99b6-f56c04e8f3cf",
+			"name": "1.0listallBooks",
+			"url": "http://localhost:8080/Turnierverwaltung-1.0/resource/team/list",
+			"time": 328,
 			"responseCode": {
 				"code": 200,
 				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				328
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "5e0f6ca9-f96a-4ef0-bc0f-e91c674aae63",
+			"name": "1.0 read 1 book",
+			"url": "http://localhost:8080/Turnierverwaltung-1.0/resource/team/read?nr=3",
+			"time": 6,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				6
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "29af0069-2e3c-474d-bebc-c8c5a0d27201",
+			"name": "1.0 read 1 book empty",
+			"url": "http://localhost:8080/Turnierverwaltung-1.0/resource/team/read",
+			"time": 7,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				7
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "fae86b0a-6cab-4655-93d3-70ae9bbba531",
+			"name": "1.1 read 1 book not found",
+			"url": "http://localhost:8080/Turnierverwaltung-1.0/resource/team/read?nr=11213123",
+			"time": 10,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				10
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "fefe9be4-292c-4d02-8d84-89a00dc80a4e",
+			"name": "1.0 read 1 tournament",
+			"url": "http://localhost:8080/Turnierverwaltung-1.0/resource/turnier/read?nr=1",
+			"time": 7,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				7
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "4d03add6-7404-4b78-a4e6-e06630e23665",
+			"name": "1.1 read 1 tournament not found",
+			"url": "http://localhost:8080/Turnierverwaltung-1.0/resource/turnier/read?nr=12344343",
+			"time": 23,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				23
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "938473af-762a-4d98-b2cd-aec7000dfc2a",
+			"name": "1.0 list all tournaments",
+			"url": "http://localhost:8080/Turnierverwaltung-1.0/resource/turnier/list",
+			"time": 9,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				9
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "fff2704e-e2c6-4d83-a339-dbdc75ba7b89",
+			"name": "2.1 delete team",
+			"url": "http://localhost:8080/Turnierverwaltung-1.0/resource/team/delete?nr=57396",
+			"time": 5,
+			"responseCode": {
+				"code": 410,
+				"name": "Gone"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				5
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "c3c4b40f-2f98-47c0-a8f2-47018973bb2c",
+			"name": "2.2 delete tournament",
+			"url": "http://localhost:8080/Turnierverwaltung-1.0/resource/tournament/delete?nr=62206",
+			"time": 4,
+			"responseCode": {
+				"code": 410,
+				"name": "Gone"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				4
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "d00311ca-d077-4754-8d5d-ee9cf64652b1",
+			"name": "2.2 delete tournament empty nr",
+			"url": "http://localhost:8080/Turnierverwaltung-1.0/resource/tournament/delete",
+			"time": 6,
+			"responseCode": {
+				"code": 410,
+				"name": "Gone"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				6
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "d6aadf3f-1e55-41b8-a4f5-8b612fd52548",
+			"name": "2.2 delete tournament non existent nr",
+			"url": "http://localhost:8080/Turnierverwaltung-1.0/resource/tournament/delete?=46545",
+			"time": 5,
+			"responseCode": {
+				"code": 410,
+				"name": "Gone"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				5
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "ab3cae60-3e31-43ce-8c21-ecb0a13d5ddc",
+			"name": "2.1 delete team empty nr",
+			"url": "http://localhost:8080/Turnierverwaltung-1.0/resource/team/delete",
+			"time": 17,
+			"responseCode": {
+				"code": 410,
+				"name": "Gone"
 			},
 			"tests": {},
 			"testPassFailCounts": {},
@@ -81,172 +243,10 @@
 			]
 		},
 		{
-			"id": "fae86b0a-6cab-4655-93d3-70ae9bbba531",
-			"name": "1.1 read 1 book not found",
-			"url": "http://localhost:8080/Turnierverwaltung-1.0/resource/team/read?nr=11213123",
-			"time": 19,
-			"responseCode": {
-				"code": 200,
-				"name": "OK"
-			},
-			"tests": {},
-			"testPassFailCounts": {},
-			"times": [
-				19
-			],
-			"allTests": [
-				{}
-			]
-		},
-		{
-			"id": "fefe9be4-292c-4d02-8d84-89a00dc80a4e",
-			"name": "1.0 read 1 tournament",
-			"url": "http://localhost:8080/Turnierverwaltung-1.0/resource/turnier/read?nr=1",
-			"time": 19,
-			"responseCode": {
-				"code": 404,
-				"name": "Not Found"
-			},
-			"tests": {},
-			"testPassFailCounts": {},
-			"times": [
-				19
-			],
-			"allTests": [
-				{}
-			]
-		},
-		{
-			"id": "4d03add6-7404-4b78-a4e6-e06630e23665",
-			"name": "1.1 read 1 tournament not found",
-			"url": "http://localhost:8080/Turnierverwaltung-1.0/resource/turnier/read?nr=12344343",
-			"time": 15,
-			"responseCode": {
-				"code": 404,
-				"name": "Not Found"
-			},
-			"tests": {},
-			"testPassFailCounts": {},
-			"times": [
-				15
-			],
-			"allTests": [
-				{}
-			]
-		},
-		{
-			"id": "938473af-762a-4d98-b2cd-aec7000dfc2a",
-			"name": "1.0 list all tournaments",
-			"url": "http://localhost:8080/Turnierverwaltung-1.0/resource/turnier/list",
-			"time": 19,
-			"responseCode": {
-				"code": 404,
-				"name": "Not Found"
-			},
-			"tests": {},
-			"testPassFailCounts": {},
-			"times": [
-				19
-			],
-			"allTests": [
-				{}
-			]
-		},
-		{
-			"id": "fff2704e-e2c6-4d83-a339-dbdc75ba7b89",
-			"name": "2.1 delete team",
-			"url": "http://localhost:8080/Turnierverwaltung-1.0/resource/team/delete?nr=57396",
-			"time": 20,
-			"responseCode": {
-				"code": 410,
-				"name": "Gone"
-			},
-			"tests": {},
-			"testPassFailCounts": {},
-			"times": [
-				20
-			],
-			"allTests": [
-				{}
-			]
-		},
-		{
-			"id": "c3c4b40f-2f98-47c0-a8f2-47018973bb2c",
-			"name": "2.2 delete tournament",
-			"url": "http://localhost:8080/Turnierverwaltung-1.0/resource/tournament/delete?nr=62206",
-			"time": 31,
-			"responseCode": {
-				"code": 410,
-				"name": "Gone"
-			},
-			"tests": {},
-			"testPassFailCounts": {},
-			"times": [
-				31
-			],
-			"allTests": [
-				{}
-			]
-		},
-		{
-			"id": "d00311ca-d077-4754-8d5d-ee9cf64652b1",
-			"name": "2.2 delete tournament empty nr",
-			"url": "http://localhost:8080/Turnierverwaltung-1.0/resource/tournament/delete",
-			"time": 22,
-			"responseCode": {
-				"code": 410,
-				"name": "Gone"
-			},
-			"tests": {},
-			"testPassFailCounts": {},
-			"times": [
-				22
-			],
-			"allTests": [
-				{}
-			]
-		},
-		{
-			"id": "d6aadf3f-1e55-41b8-a4f5-8b612fd52548",
-			"name": "2.2 delete tournament non existent nr",
-			"url": "http://localhost:8080/Turnierverwaltung-1.0/resource/tournament/delete?=46545",
-			"time": 28,
-			"responseCode": {
-				"code": 410,
-				"name": "Gone"
-			},
-			"tests": {},
-			"testPassFailCounts": {},
-			"times": [
-				28
-			],
-			"allTests": [
-				{}
-			]
-		},
-		{
-			"id": "ab3cae60-3e31-43ce-8c21-ecb0a13d5ddc",
-			"name": "2.1 delete team empty nr",
-			"url": "http://localhost:8080/Turnierverwaltung-1.0/resource/team/delete",
-			"time": 69,
-			"responseCode": {
-				"code": 410,
-				"name": "Gone"
-			},
-			"tests": {},
-			"testPassFailCounts": {},
-			"times": [
-				69
-			],
-			"allTests": [
-				{}
-			]
-		},
-		{
 			"id": "043f94b9-cd04-4e93-b3cd-b85db6786be7",
 			"name": "2.1 delete team non existent nr",
 			"url": "http://localhost:8080/Turnierverwaltung-1.0/resource/team/delete?=99999",
-			"time": 14,
+			"time": 33,
 			"responseCode": {
 				"code": 410,
 				"name": "Gone"
@@ -254,7 +254,7 @@
 			"tests": {},
 			"testPassFailCounts": {},
 			"times": [
-				14
+				33
 			],
 			"allTests": [
 				{}
@@ -264,42 +264,6 @@
 			"id": "4d5acc7c-716a-4cae-9c6e-170177fc93eb",
 			"name": "2.5 insert Team",
 			"url": "http://localhost:8080/Turnierverwaltung-1.0/resource/team/create",
-			"time": 142,
-			"responseCode": {
-				"code": 200,
-				"name": "OK"
-			},
-			"tests": {},
-			"testPassFailCounts": {},
-			"times": [
-				142
-			],
-			"allTests": [
-				{}
-			]
-		},
-		{
-			"id": "2b5e698b-b261-4c0c-9720-ba177cbeefab",
-			"name": "2.5 insert Team wrong datatype",
-			"url": "http://localhost:8080/Turnierverwaltung-1.0/resource/team/create",
-			"time": 12,
-			"responseCode": {
-				"code": 400,
-				"name": "Bad Request"
-			},
-			"tests": {},
-			"testPassFailCounts": {},
-			"times": [
-				12
-			],
-			"allTests": [
-				{}
-			]
-		},
-		{
-			"id": "30b5c92f-a2a0-42fa-803a-9d29016db674",
-			"name": "2.6 insert Tournament correct",
-			"url": "http://localhost:8080/Turnierverwaltung-1.0/resource/tournament/create",
 			"time": 49,
 			"responseCode": {
 				"code": 200,
@@ -315,10 +279,28 @@
 			]
 		},
 		{
-			"id": "3264761a-5172-4c81-8155-8b2d6d1c5c9a",
-			"name": "2.6 insert Tournament description missing",
+			"id": "2b5e698b-b261-4c0c-9720-ba177cbeefab",
+			"name": "2.5 insert Team wrong datatype",
+			"url": "http://localhost:8080/Turnierverwaltung-1.0/resource/team/create",
+			"time": 53,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				53
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "30b5c92f-a2a0-42fa-803a-9d29016db674",
+			"name": "2.6 insert Tournament correct",
 			"url": "http://localhost:8080/Turnierverwaltung-1.0/resource/tournament/create",
-			"time": 55,
+			"time": 9,
 			"responseCode": {
 				"code": 200,
 				"name": "OK"
@@ -326,7 +308,25 @@
 			"tests": {},
 			"testPassFailCounts": {},
 			"times": [
-				55
+				9
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "3264761a-5172-4c81-8155-8b2d6d1c5c9a",
+			"name": "2.6 insert Tournament description missing",
+			"url": "http://localhost:8080/Turnierverwaltung-1.0/resource/tournament/create",
+			"time": 12,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				12
 			],
 			"allTests": [
 				{}
@@ -336,15 +336,15 @@
 			"id": "bda54117-0aa5-43e1-9430-53b1a7664ff2",
 			"name": "2.6 insert Tournament description incorrect",
 			"url": "http://localhost:8080/Turnierverwaltung-1.0/resource/tournament/create",
-			"time": 135,
+			"time": 15,
 			"responseCode": {
-				"code": 200,
-				"name": "OK"
+				"code": 400,
+				"name": "Bad Request"
 			},
 			"tests": {},
 			"testPassFailCounts": {},
 			"times": [
-				135
+				15
 			],
 			"allTests": [
 				{}
@@ -354,15 +354,15 @@
 			"id": "53ea8fd6-9515-4fe3-9e0c-07d63a979f21",
 			"name": "2.6 insert Tournament startDate missing Copy",
 			"url": "http://localhost:8080/Turnierverwaltung-1.0/resource/tournament/create",
-			"time": 36,
+			"time": 8,
 			"responseCode": {
-				"code": 200,
-				"name": "OK"
+				"code": 400,
+				"name": "Bad Request"
 			},
 			"tests": {},
 			"testPassFailCounts": {},
 			"times": [
-				36
+				8
 			],
 			"allTests": [
 				{}
@@ -372,15 +372,15 @@
 			"id": "a6da4fa2-fbd7-4f81-829b-34e64f7def10",
 			"name": "2.6 insert Tournament startDate incorrect",
 			"url": "http://localhost:8080/Turnierverwaltung-1.0/resource/tournament/create",
-			"time": 35,
+			"time": 15,
 			"responseCode": {
-				"code": 200,
-				"name": "OK"
+				"code": 400,
+				"name": "Bad Request"
 			},
 			"tests": {},
 			"testPassFailCounts": {},
 			"times": [
-				35
+				15
 			],
 			"allTests": [
 				{}
@@ -390,7 +390,7 @@
 			"id": "d654dbb0-ba7e-4bb8-82b2-d7644d81662a",
 			"name": "2.7 update Team",
 			"url": "http://localhost:8080/Turnierverwaltung-1.0/resource/team/update",
-			"time": 19,
+			"time": 18,
 			"responseCode": {
 				"code": 410,
 				"name": "Gone"
@@ -398,7 +398,7 @@
 			"tests": {},
 			"testPassFailCounts": {},
 			"times": [
-				19
+				18
 			],
 			"allTests": [
 				{}
@@ -406,7 +406,7 @@
 		}
 	],
 	"count": 1,
-	"totalTime": 1498,
+	"totalTime": 650,
 	"collection": {
 		"requests": [
 			{

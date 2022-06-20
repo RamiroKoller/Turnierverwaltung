@@ -3,6 +3,7 @@ package service;
 import data.DataHandler;
 import model.Tournament;
 
+import javax.validation.Valid;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
@@ -36,8 +37,7 @@ public class TournamentService{
     @Path("create")
     @Produces(MediaType.TEXT_PLAIN)
     public Response insertTeam(
-            @FormParam("tournamentDescription") String tournamentDescription,
-            @FormParam("startDate") String startDate
+            @Valid @BeanParam Tournament tournament
     )
 
     {
@@ -47,10 +47,8 @@ public class TournamentService{
         int n = maximum - minimum + 1;
         int i = rn.nextInt() % n;
 
-        Tournament tournament = new Tournament();
         tournament.setTurnierNr(minimum + i);
-        tournament.setTournamentDescription(tournamentDescription);
-        tournament.setStartDate(startDate);
+
 
 
         DataHandler.getInstance().insertTournament(tournament);

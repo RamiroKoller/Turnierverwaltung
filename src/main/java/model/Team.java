@@ -3,6 +3,7 @@ package model;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.validator.constraints.NotEmpty;
 
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import javax.ws.rs.FormParam;
 
@@ -19,12 +20,11 @@ public class Team {
     @Size(min = 3, max = 50)
     private String teamName;
 
-    @FormParam("anzahlTrophaeen")
-    @NotEmpty
+    @FormParam("amountOfTrophies")
+    @NotNull
     private Integer amountOfTrophies;
 
-    @FormParam("gruendungsdatum")
-
+    @FormParam("foundingDate")
     private String foundingDate;
 
     @JsonIgnore
