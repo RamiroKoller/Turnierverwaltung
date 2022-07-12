@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Ramiro Koller"/>
+  <meta name="project" content="Turnierverwaltung"/>
+  <title>Edit Team</title>
+  <script src="./js/teamedit.js"></script>
+</head>
+<body>
+<nav id="nav"></nav>
+<h3> Edit Team</h3>
+<form id="teameditForm" name="teamedit">
+  <table>
+    <tr>
+      <td><label for="teamName">Team Name</label></td>
+      <td>
+        <input id="teamName" name="teamName" type="text" size="30" minlength="2" maxlength="30" required/>
+        <input id="teamNr" name="teamNr" type="teamNr"/>
+      </td>
+    </tr>
+    <tr>
+      <td><label for="Amount of Trophies">Amount of Trophies</label></td>
+      <td><input id="Amount of Trophies" name="AmountofTrophies" type="number" min="1" max="1000" step="1"/></td>
+    </tr>
+    <tr>
+      <td><label for="Founding Date">Foundingdate</label></td>
+      <td>
+        <input id="Founding Date" name="FoundingDate" type="date">
+      </td>
+    </tr>
+  </table>
+  <table>
+    <tr>
+      <td>
+        <button id="save" type="submit">Speichern</button>
+      </td>
+      <td>
+        <button id="reset" type="reset">Zurücksetzen</button>
+      </td>
+      <td>
+        <button id="cancel" type="button">Abbruch</button>
+      </td>
+    </tr>
+  </table>
+</form>
+</body>
+</html>

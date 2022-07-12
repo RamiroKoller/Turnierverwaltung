@@ -133,7 +133,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/Turnierverwaltung-1.0/resource/turnier/read?nr=1",
+					"raw": "http://localhost:8080/Turnierverwaltung-1.0/resource/tournament/read?nr=23546",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -142,13 +142,13 @@
 					"path": [
 						"Turnierverwaltung-1.0",
 						"resource",
-						"turnier",
+						"tournament",
 						"read"
 					],
 					"query": [
 						{
 							"key": "nr",
-							"value": "1"
+							"value": "23546"
 						}
 					]
 				}
@@ -161,7 +161,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/Turnierverwaltung-1.0/resource/turnier/read?nr=12344343",
+					"raw": "http://localhost:8080/Turnierverwaltung-1.0/resource/tournament/read?nr=12344343",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -170,7 +170,7 @@
 					"path": [
 						"Turnierverwaltung-1.0",
 						"resource",
-						"turnier",
+						"tournament",
 						"read"
 					],
 					"query": [
@@ -189,7 +189,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/Turnierverwaltung-1.0/resource/turnier/list",
+					"raw": "http://localhost:8080/Turnierverwaltung-1.0/resource/tournament/list",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -198,7 +198,7 @@
 					"path": [
 						"Turnierverwaltung-1.0",
 						"resource",
-						"turnier",
+						"tournament",
 						"list"
 					]
 				}
@@ -640,22 +640,22 @@
 					"urlencoded": [
 						{
 							"key": "teamNr",
-							"value": "6",
+							"value": "21743",
 							"type": "text"
 						},
 						{
 							"key": "teamName",
-							"value": "Fc Basel",
+							"value": "Fc Zürich???????",
 							"type": "text"
 						},
 						{
-							"key": "anzahlTrophaeen",
-							"value": "45",
+							"key": "amountOfTrophies",
+							"value": "15",
 							"type": "text"
 						},
 						{
-							"key": "gruendungsdatum",
-							"value": "12.03.1893",
+							"key": "foundingDate",
+							"value": "12.03.1896",
 							"type": "text"
 						}
 					]
@@ -672,6 +672,106 @@
 						"resource",
 						"team",
 						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LU07.1 Login Admin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "ramiro",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "geheim",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/Turnierverwaltung-1.0/resource/user/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Turnierverwaltung-1.0",
+						"resource",
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LU07.1 Login user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "koller",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "passwort",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/Turnierverwaltung-1.0/resource/user/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Turnierverwaltung-1.0",
+						"resource",
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LU0.1 Logout",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "http://localhost:8080/Turnierverwaltung-1.0/resource/user/logout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Turnierverwaltung-1.0",
+						"resource",
+						"user",
+						"logout"
 					]
 				}
 			},
