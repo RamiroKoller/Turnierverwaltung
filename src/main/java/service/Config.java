@@ -29,6 +29,7 @@ public class Config extends Application {
         providers.add(TeamService.class);
         providers.add(TestService.class);
         providers.add(TournamentService.class);
+        providers.add(UserService.class);
         return providers;
     }
 
